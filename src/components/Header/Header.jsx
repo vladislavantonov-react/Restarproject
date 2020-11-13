@@ -1,5 +1,6 @@
 import React from "react";
 import hero from  '../../assets/image/Hero.svg'
+import styles from "../Navbar/navbar.module.scss";
 
 const Header = () => {
     console.log('Header')
@@ -10,7 +11,7 @@ const Header = () => {
                     src={hero}
                     alt=""
                     style={{
-                        width: '100%',
+                        width: '575px',
                         height:'107px',
                         marginTop:'20px',
                         marginBottom:'20px',

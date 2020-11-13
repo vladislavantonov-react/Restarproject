@@ -13,12 +13,12 @@ const Home = () => {
         {
             title:'Gold',
             price:'$243.00',
-            img: lampOne,
+            img: lampTwo,
         },
         {
             title:'Gold',
             price:'$243.00',
-            img: lampTwo,
+            img: lampOne,
         }
 
     ]
@@ -27,12 +27,13 @@ const Home = () => {
             <Container>
                 <Row className="justify-content-center">
                     <Header/>
+                    <Row className="justify-content-space-between d-flex">
                     {arr.map((item) => (
-                        <Col lg={5}>
+                        <Col lg={6} >
                             <ImgMediaCard title={item.title} price={item.price} img={item.img}/>
-
                         </Col>
                     ))}
+                    </Row>
                 </Row>
             </Container>
 

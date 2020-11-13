@@ -1,4 +1,6 @@
 import React from "react";
+import styles from "./card.module.scss"
+
 import {
     Card,
     CardDeck,
@@ -8,19 +10,19 @@ import {
 
 export default function ImgMediaCard({title, price, img}) {
     return (
-<div onClick={()=>alert('CLICK')}>
-            <CardDeck>
-                    <Card>
-                    <Card.Body>
+        <div onClick={() => alert('CLICK')}>
+            <CardDeck className={styles.Card}>
+                <Card style={{borderRadius: '10px'}}>
+                    <Card.Body  style={{padding:'0px'}}>
                         <Card.Img
                             variant="top"
                             src={img}
                         />
+                        <Button variant="light" size="lg" block>{title} {price}</Button>
                     </Card.Body>
-                    <Button variant="light" size="lg" block>{title} {price}</Button>
-                    </Card>
+                </Card>
 
             </CardDeck>
-</div>
+        </div>
     );
 }
