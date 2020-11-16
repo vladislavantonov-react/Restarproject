@@ -13,11 +13,11 @@ const NavbarNew = () => {
                 <Container>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
-                        <NavLink to="/" activeClassName={styles.Ss}>Starter Store  </NavLink>
+                        <NavLink to="/" activeClassName={styles.Active}>Starter Store  </NavLink>
                         <div style={{padding:'35px'}}>
-                            <NavLink className={styles.Ss} to="/dashboard" >Sign up</NavLink>
-                            <NavLink className={styles.Ss} to="/about">Sign in</NavLink>
-                            <NavLink className={styles.Ss} to="/cart"><FaShoppingCart className={styles.Sss}/>Cart(0)</NavLink>
+                            <NavLink  to="/signup" activeClassName={styles.Active}>Sign up</NavLink>
+                            <NavLink  to="/sign" activeClassName={styles.Active}>Sign in</NavLink>
+                            <NavLink  to="/cart" activeClassName={styles.Active}><FaShoppingCart className={styles.Sss}/>Cart(0)</NavLink>
                         </div>
                 </Navbar.Collapse>
                 </Container>
