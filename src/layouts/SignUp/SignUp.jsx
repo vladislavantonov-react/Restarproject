@@ -67,25 +67,36 @@ const SignUp = () => {
                 <form onSubmit={onSubmit}>
                     <Form.Group controlId="formGroupName">
                         <Form.Label>Name</Form.Label>
-                    <Form.Control className={styles.Nickname} name='name' type="text" placeholder='Enter your name'/>
+                    <Form.Control name='name' type="text" placeholder='Enter your name'/>
                     </Form.Group>
                     <Form.Group controlId="formGroupEmail">
                         <Form.Label>Email address</Form.Label>
                         {(emailDirty && emailError) && <div style={{color:'red'}}>{emailError}</div>}
-                    <Form.Control className={styles.Mail} onChange={e => emailHandler(e)} value={email} onBlur={e => blurHandler(e)} name='email' type="text" placeholder='Enter your email'/>
+                    <Form.Control
+                        onChange={e => emailHandler(e)}
+                        value={email}
+                        onBlur={e => blurHandler(e)}
+                        name='email'
+                        type="text"
+                        placeholder='Enter your email'
+                    />
                     </Form.Group>
                     <Form.Group controlId="formGroupPassword">
                         <Form.Label>Password</Form.Label>
                         {(passwordDirty && passwordError) && <div style={{color:'red'}}>{passwordError}</div>}
-                    <Form.Control className={styles.Pas} onChange={e => passwordHandler(e)} value={password} onBlur={e => blurHandler(e)} name='password' type="password" placeholder='Enter your password'/>
+                    <Form.Control
+                        onChange={e => passwordHandler(e)}
+                        value={password}
+                        onBlur={e => blurHandler(e)}
+                        name='password'
+                        type="password"
+                        placeholder='Enter your password'
+                    />
                     </Form.Group>
-                    <Button style={{backgroundColor:'#eb7413', borderColor:'#eb7413'}} disabled={!formValid} type='submit'>Register</Button>
+                    <Button className={styles.Reg} disabled={!formValid} type='submit'>Register</Button>
                 </form>
             </Form>
         </Container>
     );
 };
 export default SignUp;
-
-
-

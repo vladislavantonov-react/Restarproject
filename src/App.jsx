@@ -21,10 +21,10 @@ export default function App() {
             <Route path="/signup">
               <SignUp />
             </Route>
-            <Route path="/sign">
+            <Route path="/sign_in">
               <SignIn />
             </Route>
-            <Route path="/dashboard">
+            <Route path="/cart">
               <Dashboard />
             </Route>
           </Switch>
@@ -33,26 +33,10 @@ export default function App() {
   );
 }
 
-// function () {
-//   return (
-//       <div>
-//         <h2>About</h2>
-//       </div>
-//   );
-// }
-
-function Dashboard() {
-   return (
-       <div>
-         <h2></h2>
-       </div>
-   );
- }
-
-// function Cart() {
-//   return (
-//       <div>
-//         <h2>Cart</h2>
-//       </div>
-//   );
-// }
+    function Dashboard() {
+       return (
+           <div>
+             <h2></h2>
+           </div>
+       );
+     }

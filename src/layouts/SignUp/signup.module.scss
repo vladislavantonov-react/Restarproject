@@ -7,4 +7,20 @@
   margin-top: 20px;
   border: 2px solid lightgray;
   border-radius: 7px;
+
+  .Reg {
+    border-color: #eb7413;
+    background-color: #eb7413;
+    &:hover {
+      border-color: #eb7413;
+      background-color: #eb7413;
+    }
+    &:disabled {
+      border-color: #eb7413;
+      background-color: #eb7413;
+    }
   }
+
+}
+
+

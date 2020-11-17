@@ -12,8 +12,8 @@ export default function ImgMediaCard({title, price, img}) {
     return (
         <div onClick={() => alert('CLICK')}>
             <CardDeck className={styles.Card}>
-                <Card style={{borderRadius: '10px'}}>
-                    <Card.Body  style={{padding:'0px'}}>
+                <Card style={{borderRadius: '10px', margin:'20px'}}>
+                    <Card.Body>
                         <Card.Img
                             variant="top"
                             src={img}

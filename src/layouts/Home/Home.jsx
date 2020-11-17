@@ -3,6 +3,8 @@ import Header from '../../components/Header/Header';
 import ImgMediaCard from "../../components/Card/Card";
 import lampOne from '../../assets/image/lampOne.png'
 import lampTwo from '../../assets/image/lampTwo.png'
+import lampThree from '../../assets/image/lampThree.png'
+import lampFour from '../../assets/image/lampFour.png'
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -19,6 +21,16 @@ const Home = () => {
             title:'Gold',
             price:'$243.00',
             img: lampOne,
+        },
+        {
+            title:'Gold',
+            price:'$243.00',
+            img: lampThree,
+        },
+        {
+            title:'Gold',
+            price:'$243.00',
+            img: lampFour,
         }
 
     ]

@@ -17,7 +17,7 @@ const SignIn = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" />
                 </Form.Group>
-                <Button style={{backgroundColor:'#eb7413', borderColor:'#eb7413'}} type='submit'>Register</Button>
+                <Button className={styles.Reg} type='submit'>Register</Button>
             </Form>
         </Container>
     );
