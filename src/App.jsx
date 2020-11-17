@@ -1,6 +1,8 @@
 import React from "react";
 import Home from '../src/layouts/Home/Home'
 import NavbarNew from "./components/Navbar/Navbar";
+import SignUp from "./layouts/SignUp/SignUp";
+import SignIn from "./layouts/SignIn/SignIn"
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,11 +18,11 @@ export default function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/about">
-              <About />
+            <Route path="/signup">
+              <SignUp />
             </Route>
-            <Route path="/cart">
-              <Cart />
+            <Route path="/sign">
+              <SignIn />
             </Route>
             <Route path="/dashboard">
               <Dashboard />
@@ -31,26 +33,26 @@ export default function App() {
   );
 }
 
-function About() {
-  return (
-      <div>
-        <h2>About</h2>
-      </div>
-  );
-}
+// function () {
+//   return (
+//       <div>
+//         <h2>About</h2>
+//       </div>
+//   );
+// }
 
 function Dashboard() {
-  return (
-      <div>
-        <h2>Dashboard</h2>
-      </div>
-  );
-}
+   return (
+       <div>
+         <h2></h2>
+       </div>
+   );
+ }
 
-function Cart() {
-  return (
-      <div>
-        <h2>Cart</h2>
-      </div>
-  );
-}
+// function Cart() {
+//   return (
+//       <div>
+//         <h2>Cart</h2>
+//       </div>
+//   );
+// }
