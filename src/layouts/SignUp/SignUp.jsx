@@ -62,8 +62,8 @@ const SignUp = () => {
 
     return (
         <Container>
-            <h1 className={styles.Head}>Create an account</h1>
-            <Form className={styles.Cont}>
+            <h1 className={styles.head}>Create an account</h1>
+            <Form className={styles.cont}>
                 <form onSubmit={onSubmit}>
                     <Form.Group controlId="formGroupName">
                         <Form.Label>Name</Form.Label>
@@ -93,7 +93,7 @@ const SignUp = () => {
                         placeholder='Enter your password'
                     />
                     </Form.Group>
-                    <Button className={styles.Reg} disabled={!formValid} type='submit'>Register</Button>
+                    <Button className={styles.reg} disabled={!formValid} type='submit'>Register</Button>
                 </form>
             </Form>
         </Container>

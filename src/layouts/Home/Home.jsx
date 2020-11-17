@@ -40,8 +40,8 @@ const Home = () => {
                 <Row className="justify-content-center">
                     <Header/>
                     <Row className="justify-content-space-between d-flex">
-                    {arr.map((item) => (
-                        <Col lg={6} >
+                    {arr.map((item, key) => (
+                        <Col lg={6} key={key}>
                             <ImgMediaCard title={item.title} price={item.price} img={item.img}/>
                         </Col>
                     ))}

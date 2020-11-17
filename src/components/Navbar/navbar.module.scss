@@ -1,55 +1,62 @@
-.Navbar{
+.navbar{
+  border: 2px solid #f2f2f2;
+
+  box-shadow: 0 0 10px #f0f0f0;
 
   &__collaps {
     justify-content: space-between;
   }
 
 }
-.Start_icon{
+.start_icon{
+  color: #e24c10;
   margin-bottom: 7px;
   margin-right: 34px;
 
 }
 
-  .Cart_icon {
+  .cart_icon {
     margin-right: 5px;
     margin-left: 5px;
   }
 
 .linkStarter {
   a{
-    padding: 0 135px;
+    padding: 33px 28px;
     font-size: 150%;
-    margin-left: -22px;
+    margin-left: 84.5px;
     color: black;
     font-family:"Lato";
 
   }
 }
-.Active {
+.active {
   max-width: 100px;
   position: relative;
+  padding: 33px 28px;
+  background-color: #f2f2f2;
 
-
-  &:after {
-    display: block;
-    left: 46.655%;
-    position: absolute;
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 9px 9px 0 9px;
-    border-color: #c9d4e0 transparent transparent transparent;
-  }
+    &:after {
+      display: block;
+      bottom: -10.5%;
+      left: 43.9%;
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 9px 9px 0 9px;
+      border-color: #f2f2f2 transparent transparent transparent;
+    }
 
 }
 
 .linkWrapper{
-  padding:25px;
+  padding: 20px;
   a{
-    margin-right: 84px;
-    margin-left: -42px;
+    padding: 33px 28px;
+    margin-right: 40px;
+    margin-left: -40px;
     font-family: "Lato";
     font-size: 150%;
     color: black;

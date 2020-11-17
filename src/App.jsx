@@ -25,7 +25,7 @@ export default function App() {
               <SignIn />
             </Route>
             <Route path="/cart">
-              <Dashboard />
+              <div></div>
             </Route>
           </Switch>
         </div>
@@ -33,10 +33,3 @@ export default function App() {
   );
 }
 
-    function Dashboard() {
-       return (
-           <div>
-             <h2></h2>
-           </div>
-       );
-     }

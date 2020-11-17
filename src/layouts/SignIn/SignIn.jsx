@@ -7,8 +7,8 @@ const SignIn = () => {
 
     return (
         <Container>
-            <h1 className={styles.Head}>Login to your account</h1>
-            <Form className={styles.Cont}>
+            <h1 className={styles.head}>Login to your account</h1>
+            <Form className={styles.cont}>
                 <Form.Group controlId="formGroupEmail">
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" placeholder="Enter email" />
@@ -17,7 +17,7 @@ const SignIn = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" />
                 </Form.Group>
-                <Button className={styles.Reg} type='submit'>Register</Button>
+                <Button className={styles.reg} type='submit'>Register</Button>
             </Form>
         </Container>
     );
