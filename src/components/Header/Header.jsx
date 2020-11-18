@@ -1,22 +1,17 @@
 import React from "react";
 import hero from  '../../assets/image/Hero.svg'
-import styles from "../Navbar/navbar.module.scss";
+import styles from './header.module.scss'
 
 const Header = () => {
     console.log('Header')
     return(
-        <div>
+        <div  className={styles.header}>
             <h1>
                 <img
                     src={hero}
                     alt=""
-                    style={{
-                        width: '575px',
-                        height:'107px',
-                        marginTop:'20px',
-                        marginBottom:'20px',
-                    }}
-                />
+                    className={styles.img}
+                    />
             </h1>
         </div>
     )

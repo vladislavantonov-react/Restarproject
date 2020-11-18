@@ -1,4 +1,9 @@
-//.Card {
-//  border: 6px solid #7922CC;
-//  border-radius: 25px;
-//}
+.card_deck{
+  @media all {
+    max-width: 528px;
+  }
+}
+.card {
+  borderRadius: 10px;
+  margin: 20px;
+}
