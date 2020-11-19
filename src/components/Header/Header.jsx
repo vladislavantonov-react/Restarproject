@@ -1,6 +1,6 @@
 import React from "react";
-import hero from  '../../assets/image/Hero.svg'
-import styles from './header.module.scss'
+import hero from  '../../assets/image/Hero.svg';
+import styles from './header.module.scss';
 
 const Header = () => {
     console.log('Header')

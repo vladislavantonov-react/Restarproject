@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import styles from './signup.module.scss'
+import styles from './signup.module.scss';
 import {Container, Form, Button} from "react-bootstrap";
 
 const SignUp = () => {

@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 import Navbar from 'react-bootstrap/Navbar';
 import Container from "react-bootstrap/Container";
 import { FaShoppingCart, FaFire } from "react-icons/fa";
-import styles from "./navbar.module.scss"
+import styles from "./navbar.module.scss";
 
 const NavbarNew = () => {
 
