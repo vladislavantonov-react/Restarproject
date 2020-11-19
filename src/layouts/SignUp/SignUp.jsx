@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import styles from './signup.module.scss';
 import {Container, Form, Button} from "react-bootstrap";
+
+import styles from './signup.module.scss';
 
 const SignUp = () => {
     const [email, setEmail] = useState()

@@ -1,4 +1,5 @@
 import React from "react";
+import MyVerticallyCenteredModal from "../Modal/Modal";
 import styles from "./card.module.scss";
 import {
     Card,
@@ -6,9 +7,9 @@ import {
     Button,
 } from 'react-bootstrap';
 
-import MyVerticallyCenteredModal from "../Modal/Modal";
 
-export default function ImgMediaCard({title, price, img, about}) {
+
+export default function ImgMediaCard({title, price, img, about, setHome}) {
     const [modalShow, setModalShow] = React.useState(false);
     return (
         <>
@@ -20,12 +21,15 @@ export default function ImgMediaCard({title, price, img, about}) {
                                 variant="top"
                                 src={img}
                             />
-                            <Button variant="light" size="lg" block>{title} {price}</Button>
+                            <footer className={styles.footer}>
+                                {title} {price}.00 $
+                            </footer>
                         </Card.Body>
                     </Card>
                 </CardDeck>
             </div>
             <MyVerticallyCenteredModal
+                setHome={setHome}
                 show={modalShow}
                 onHide={() => setModalShow(false)}
                 title={title}

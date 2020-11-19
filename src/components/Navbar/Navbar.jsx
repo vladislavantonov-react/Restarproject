@@ -19,7 +19,7 @@ const NavbarNew = () => {
                         <div className={styles.linkWrapper}>
                             <NavLink  to="/signup"  activeClassName={styles.active}>Sign up</NavLink>
                             <NavLink  to="/sign_in" activeClassName={styles.active}>Sign in</NavLink>
-                            <NavLink  to="/cart" activeClassName={styles.active}><FaShoppingCart className={styles.cart_icon}/>Cart(0)</NavLink>
+                            <NavLink  to="/cart" activeClassName={styles.active}><FaShoppingCart className={styles.cart_icon}/>Card:</NavLink>
                         </div>
                 </Navbar.Collapse>
                 </Container>

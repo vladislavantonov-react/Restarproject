@@ -2,8 +2,10 @@
   width:35%;
 }
 .control{
-  width: 50% !important;
-  display: inline-flex !important;
+  input {
+    width: 50% ;
+    display: inline-flex ;
+  }
 }
 .price {
   background-color: #eb7413 !important;
