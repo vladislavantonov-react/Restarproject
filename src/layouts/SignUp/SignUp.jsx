@@ -75,7 +75,7 @@ const SignUp = () => {
                             onChange={e => emailHandler(e)}
                             value={email}
                             onBlur={e => blurHandler(e)}
-                            name='email'https://react-bootstrap.netlify.app/components/figures/
+                            name='email'
                             type="text"
                             placeholder='Enter your email'
                         />
