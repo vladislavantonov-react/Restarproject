@@ -1,16 +1,13 @@
 import React from "react";
 import MyVerticallyCenteredModal from "../Modal/Modal";
+import {Card, CardDeck,} from 'react-bootstrap';
+
 import styles from "./card.module.scss";
-import {
-    Card,
-    CardDeck,
-    Button,
-} from 'react-bootstrap';
 
 
-
-export default function ImgMediaCard({title, price, img, about, setHome}) {
+export default function ImgMediaCard({title, price, img, about, qty, id, total, setHome}) {
     const [modalShow, setModalShow] = React.useState(false);
+
     return (
         <>
             <div onClick={() => setModalShow(true)}>
@@ -32,12 +29,14 @@ export default function ImgMediaCard({title, price, img, about, setHome}) {
                 setHome={setHome}
                 show={modalShow}
                 onHide={() => setModalShow(false)}
+                total={total}
                 title={title}
                 price={price}
                 about={about}
                 img={img}
+                id={id}
+                qty={qty}
             />
         </>
     )
 }
-

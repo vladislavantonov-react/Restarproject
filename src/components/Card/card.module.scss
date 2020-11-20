@@ -1,14 +1,18 @@
-.card_deck{
+.card_deck {
   @media all {
     max-width: 528px;
   }
 }
+
 .card {
-  borderRadius: 10px;
+  borderRadius: 15px;
   margin: 20px;
+
+
 }
-.footer{
-  padding:2px;
-  border:2px solid #f2f2f2;
+
+.footer {
+  padding: 2px;
+  border: 2px solid #f2f2f2;
   background-color: #f2f2f2;
 }

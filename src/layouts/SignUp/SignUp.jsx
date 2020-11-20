@@ -12,33 +12,31 @@ const SignUp = () => {
     const [passwordError, setPasswordError] = useState('Password false')
     const [formValid, setFormValid] = useState(false)
 
-
-    useEffect( () => {
-            if(emailError || passwordError){
+    useEffect(() => {
+            if (emailError || passwordError) {
                 setFormValid(false)
             } else {
                 setFormValid(true)
             }
         },
-        [emailError,passwordError]
+        [emailError, passwordError]
     )
-
 
     const emailHandler = (e) => {
         setEmail(e.target.value)
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        if (!re.test(String(e.target.value).toLowerCase())){
+        if (!re.test(String(e.target.value).toLowerCase())) {
             setEmailError("Неправильный адресс электронной почты")
-    } else {
+        } else {
             setEmailError("")
         }
     }
 
-    const passwordHandler = (e) =>{
+    const passwordHandler = (e) => {
         setPassword(e.target.value)
-        if(e.target.value.length < 3 || e.target.value.length > 8) {
+        if (e.target.value.length < 3 || e.target.value.length > 8) {
             setPasswordError("Пароль должен быть не менее трех символов и не более восьми")
-            if(!e.target.value){
+            if (!e.target.value) {
                 setPasswordError("Не должен быть пустым")
             } else {
                 setPasswordError('')
@@ -47,7 +45,7 @@ const SignUp = () => {
     }
 
     const blurHandler = (e) => {
-        switch (e.target.name){
+        switch (e.target.name) {
             case 'email':
                 setEmailDirty(true)
                 break
@@ -68,31 +66,31 @@ const SignUp = () => {
                 <form onSubmit={onSubmit}>
                     <Form.Group controlId="formGroupName">
                         <Form.Label>Name</Form.Label>
-                    <Form.Control name='name' type="text" placeholder='Enter your name'/>
+                        <Form.Control name='name' type="text" placeholder='Enter your name'/>
                     </Form.Group>
                     <Form.Group controlId="formGroupEmail">
                         <Form.Label>Email address</Form.Label>
-                        {(emailDirty && emailError) && <div style={{color:'red'}}>{emailError}</div>}
-                    <Form.Control
-                        onChange={e => emailHandler(e)}
-                        value={email}
-                        onBlur={e => blurHandler(e)}
-                        name='email'
-                        type="text"
-                        placeholder='Enter your email'
-                    />
+                        {(emailDirty && emailError) && <div style={{color: 'red'}}>{emailError}</div>}
+                        <Form.Control
+                            onChange={e => emailHandler(e)}
+                            value={email}
+                            onBlur={e => blurHandler(e)}
+                            name='email'https://react-bootstrap.netlify.app/components/figures/
+                            type="text"
+                            placeholder='Enter your email'
+                        />
                     </Form.Group>
                     <Form.Group controlId="formGroupPassword">
                         <Form.Label>Password</Form.Label>
-                        {(passwordDirty && passwordError) && <div style={{color:'red'}}>{passwordError}</div>}
-                    <Form.Control
-                        onChange={e => passwordHandler(e)}
-                        value={password}
-                        onBlur={e => blurHandler(e)}
-                        name='password'
-                        type="password"
-                        placeholder='Enter your password'
-                    />
+                        {(passwordDirty && passwordError) && <div style={{color: 'red'}}>{passwordError}</div>}
+                        <Form.Control
+                            onChange={e => passwordHandler(e)}
+                            value={password}
+                            onBlur={e => blurHandler(e)}
+                            name='password'
+                            type="password"
+                            placeholder='Enter your password'
+                        />
                     </Form.Group>
                     <Button className={styles.reg} disabled={!formValid} type='submit'>Register</Button>
                 </form>
@@ -100,4 +98,5 @@ const SignUp = () => {
         </Container>
     );
 };
+
 export default SignUp;

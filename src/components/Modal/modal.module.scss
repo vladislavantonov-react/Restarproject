@@ -1,16 +1,26 @@
-.img{
-  width:35%;
+.img {
+  width: 35%;
 }
-.control{
+
+.control {
   input {
-    width: 50% ;
-    display: inline-flex ;
+    width: 50%;
+    display: inline-flex;
+    border-right: 0px;
+    border-right-color: white;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 }
+
 .price {
-  background-color: #eb7413 !important;
-  border-color: #eb7413 !important;
-  .plus{
+  background-color: #eb7413;
+  border: solid #eb7413;
+  border-radius: 3px;
+  padding: 4px;
+  color: white;
+
+  .plus {
     color: #fce3d5;
     margin-right: 1px;
   }
