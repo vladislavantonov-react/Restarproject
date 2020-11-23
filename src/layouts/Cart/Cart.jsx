@@ -1,48 +1,52 @@
 import React from 'react';
-import {
-    Button,
-    Container,
-    Form
-} from "react-bootstrap";
+import {Button, Container, Form} from "react-bootstrap";
 
 import styles from "./cart.module.scss"
+import {FaTimes} from "react-icons/fa";
 
-const Cart = ({data}) => {
-    let total = data.reduce(function (sum, current) {
-        console.log(current)
-        return sum + current.price;
-    }, 0);
-    console.log(total)
-    // const listOfNumbers = {}
-    // console.log(data)
-    // const unique = data.filter((el, idx, arr) => {
-    //     console.log(el)
-    //     if (arr.findIndex(lamp => lamp.id === el.id) === idx) {
-    //         listOfNumbers[el.id] = 1
-    //         return true
-    //     }
-    //     listOfNumbers[el.id] += 1
-    //     return false
-    // })
-    // console.log(unique, listOfNumbers, 'listOfNumbers')
-    const array1 = [];
+const Cart = () => {
+    let cart = JSON.parse(localStorage.getItem('cart')) || []
+    let subTotal = cart.reduce(
+        (accumulator, currentValue) => {
+            return accumulator + (currentValue.total * currentValue.price)
+        }, 0);
 
+    const handleButtonClick = (id) => {
+        let addEl = cart.findIndex((el) => el.id === id)
+        cart.splice(addEl, 1)
+        localStorage.setItem('cart', JSON.stringify(cart))
+    }
 
     return (
         <Container>
-            <h1>Cart</h1>
+            <h1></h1>
             <Form>
-                {data.map(d => {
-                    total += d.price
+                {cart.map(d => {
                     return <>
-                        <span>{d.title}</span>
-                        <img src={d.img} className={styles.img}/>
-                        <span>{d.id}</span>
+                        <div className={styles.content}>
+                            <img src={d.img} className={styles.img}/>
+                            <div className={styles.content2}>
+                                <span className={styles.title}>{d.title}</span>
+                                <span className={styles.totalprice}>{d.total}x ${d.price}</span>
+                                <span className={styles.about}>{d.about}</span>
+                                <span >{d.qty}</span>
+                                <span>{d.id}</span>
+                            </div>
+                            <Button
+                                variant="link"
+                                onClick={() => handleButtonClick()}
+                                className={styles.close}
+                            ><FaTimes className={styles.icons}/>
+                            </Button>
+                        </div>
                     </>
                 })}
-                <footer className={styles.footer}>
-                    <Button variant="dark"> Sub total:{total}$ </Button>
+                <div className={styles.footer}>
+                <footer className={styles.box}>
+                        <span className={styles.subtotal}>Sub total: ${subTotal}</span>
+                        <Button variant="dark" className={styles.button}> Check out </Button>
                 </footer>
+                </div>
             </Form>
         </Container>
     );

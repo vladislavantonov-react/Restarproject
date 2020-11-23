@@ -1,28 +1,29 @@
-.img {
-  width: 35%;
-}
+.body {
+  display: flex;
 
-.control {
-  input {
-    width: 50%;
-    display: inline-flex;
-    border-right: 0px;
-    border-right-color: white;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+  .img {
+    width: 24%;
   }
-}
 
-.price {
-  background-color: #eb7413;
-  border: solid #eb7413;
-  border-radius: 3px;
-  padding: 4px;
-  color: white;
+  .control {
+    margin-top:20px;
+    input {
+      max-width: 55%;
+      display: inline-flex;
+    }
+  }
 
-  .plus {
-    color: #fce3d5;
-    margin-right: 1px;
+  .price {
+    background-color: #eb7413;
+    border: solid #eb7413;
+    border-radius: 3px;
+    padding: 4px;
+    color: white;
+
+    .plus {
+      color: #fce3d5;
+      margin-right: 1px;
+    }
   }
 }
 

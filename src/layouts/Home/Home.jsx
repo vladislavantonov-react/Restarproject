@@ -19,10 +19,8 @@ const Home = ({setHome}) => {
             title: 'Gold',
             price: 243,
             img: lampTwo,
-            about: '...',
-            qty: 5,
-            total:0,
-
+            about: 'Some more information goes here...',
+            qty: 5000000000,
         },
 
         {
@@ -30,10 +28,8 @@ const Home = ({setHome}) => {
             title: 'Blue Desk',
             price: 253,
             img: lampOne,
-            about: '...',
-            qty: 6,
-            total:0,
-
+            about: 'Some more information goes here...',
+            qty: 60000000000,
         },
 
         {
@@ -41,10 +37,8 @@ const Home = ({setHome}) => {
             title: 'Soft',
             price: 270,
             img: lampThree,
-            about: '...',
-            qty: 4,
-            total:0,
-
+            about: 'Some more information goes here...',
+            qty: 400000000000,
         },
 
         {
@@ -52,10 +46,8 @@ const Home = ({setHome}) => {
             title: 'Triangle',
             price: 223,
             img: lampFour,
-            about: '...',
-            qty: 1,
-            total:0,
-
+            about: 'Some more information goes here...',
+            qty: 100000000000,
         }
     ]
 
@@ -76,7 +68,6 @@ const Home = ({setHome}) => {
                                 title={item.title}
                                 price={item.price}
                                 about={item.about}
-                                total={item.total}
                                 img={item.img}
                                 qty={item.qty}
                                 id={item.id}

@@ -12,7 +12,9 @@ import {FaCartPlus} from 'react-icons/fa';
 import styles from './modal.module.scss';
 
 export default function MyVerticallyCenteredModal({price, img, total, title, about, setHome, id, qty, ...props}) {
-const [changeError, setChangeError] = useState(false)
+    const [changeError, setChangeError] = useState(false)
+    const [value, setValue] = useState(null)
+
     const buttonHandler = (e) => {
         setChangeError(e.target.value)
 
@@ -26,22 +28,51 @@ const [changeError, setChangeError] = useState(false)
         }
     }
 
-    const handleButtonClick = (id, total) => {
-        let cart = JSON.parse(localStorage.getItem('cart')) || '';
+    const handleChange = (e) => {
+        setValue(Number(e.target.value))
+    }
 
-        debugger
-        if (cart.includes(id)) {
-            let index = cart.indexOf(id)
-            cart[index].total = total
-            // cart[cart.indexOf(qty)] = qty - total
-            localStorage.setItem('cart', JSON.stringify(cart));
+    const handleButtonClick = (id, total) => {
+        // debugger
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let prodList = JSON.parse(localStorage.getItem('productsList')) || [];
+
+        let addEl = cart.findIndex((el) => el.id === id)
+
+        if (cart.length) {
+            if (addEl !== -1) {
+
+                let delEl = prodList.findIndex((el) => el.id === id)
+
+                debugger
+                prodList.splice(delEl, 1, {
+                    ...prodList[delEl],
+                    id: prodList[delEl].id,
+                    qty: prodList[delEl].qty - total
+                })
+
+                cart.splice(addEl, 1, {
+                    ...cart[addEl],
+                    total: cart[addEl].total + total
+                })
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+                localStorage.setItem('productsList', JSON.stringify(prodList));
+            } else {
+                cart = [...cart, {id, total, price, img, about, title, qty}]
+
+                localStorage.setItem('cart', JSON.stringify(cart));
+            }
         } else {
 
-            cart = [...cart, {id, total}]
-            localStorage.setItem('cart', JSON.stringify([...cart, {id, total}]));
+            cart = [...cart, {id, total, price, img, about, title, qty}]
+
+            localStorage.setItem('cart', JSON.stringify(cart));
         }
 
     }
+
 
     return (
         <Modal
@@ -52,11 +83,10 @@ const [changeError, setChangeError] = useState(false)
         >
             <Modal.Header closeButton>
                 <Modal.Title id="contained-modal-title-vcenter">
-                    Modal heading
+                    {title}
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body className={styles.body}>
-                <h4> {title} </h4>
                 <img className={styles.img}
                      src={img}
                 />
@@ -74,7 +104,7 @@ const [changeError, setChangeError] = useState(false)
                                 <Button
                                     onChange={buttonHandler}
                                     className={styles.price}
-                                    onClick={() => handleButtonClick(id, total)}
+                                    onClick={() => handleButtonClick(id, value, img, qty, title, about)}
                                 >
                                     <FaCartPlus className={styles.plus}/>Add to Cart
                                 </Button>
@@ -83,9 +113,9 @@ const [changeError, setChangeError] = useState(false)
                     </Col>
                 </Row>
             </Modal.Body>
-            <Modal.Footer>
-                <Button onClick={props.onHide}>Close</Button>
-            </Modal.Footer>
+            {/*<Modal.Footer>*/}
+                {/*<Button onClick={props.onHide}>Close</Button>*/}
+            {/*</Modal.Footer>*/}
         </Modal>
     );
 }
