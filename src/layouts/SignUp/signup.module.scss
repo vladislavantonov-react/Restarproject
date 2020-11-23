@@ -1,0 +1,26 @@
+.head {
+  margin-top: 20px;
+}
+
+.cont {
+  padding: 10px;
+  margin-top: 20px;
+  border: 2px solid lightgray;
+  border-radius: 7px;
+
+  .reg {
+    border-color: #eb7413;
+    background-color: #eb7413;
+
+    &:hover {
+      border-color: #eb7413;
+      background-color: #eb7413;
+    }
+
+    &:disabled {
+      border-color: #eb7413;
+      background-color: #eb7413;
+    }
+  }
+
+}
